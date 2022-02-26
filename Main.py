@@ -1,9 +1,18 @@
-from Addition import *
+from Operations.Addition import *
 
 whack = addition()
 
-zahl1 = int(input("Enter number 1:"))
-zahl2 = int(input("Enter number 2:"))
-operator = input("Enter operator:")
-if operator == "+":
-    print(whack.plus(2, 3))
+inputnumbertype1 = input(
+    "What numbersystem is the first number? (Bin / Okt / Dez / Hex):")
+
+if inputnumbertype1 == "Bin":
+
+    number1 = int(input("Enter number 1:"))
+    inputnumbertype2 = input(
+        "What numbersystem is the second number? (Bin/Okt/Dez/Hex):")
+
+    if inputnumbertype2 == "Bin":
+        number2 = int(input("Enter number 2:"))
+        operator = input("Enter an operator ( + / - / * / /):")
+
+        if operator == "+":
